@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <p>Welcome back! Here's an overview of the system data.</p>
+    </header>
+
+    <div class="dashboard">
+        <!-- Data Karyawan -->
+        <div class="card">
+            <h2>Total Karyawan</h2>
+            <p>50</p>
+            <a href="data-karyawan.html">View Details</a>
+        </div>
+
+        <!-- Data Departemen -->
+        <div class="card">
+            <h2>Jumlah Departemen</h2>
+            <p>10</p>
+            <a href="data-departemen.html">View Details</a>
+        </div>
+
+        <!-- Data Kehadiran Karyawan -->
+        <div class="card">
+            <h2>Karyawan Hadir</h2>
+            <p>45</p>
+            <a href="data-kehadiran.html">View Details</a>
+        </div>
+
+        <!-- Data Cuti Karyawan -->
+        <div class="card">
+            <h2>Cuti Karyawan</h2>
+            <p>5</p>
+            <a href="data-cuti.html">View Details</a>
+        </div>
+
+        <!-- Laporan dan Analisis -->
+        <div class="card">
+            <h2>Laporan & Analisis</h2>
+            <p>Overview of system performance</p>
+            <a href="laporan-analisis.html">View Details</a>
+        </div>
+    </div>
+</body>
+</html>
