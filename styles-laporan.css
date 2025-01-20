@@ -22,7 +22,7 @@ body {
     flex-direction: column; /* Layout kolom */
     padding: 20px;
     position: fixed; /* Sidebar tetap di tempat */
-    height: 100%; /* Tinggi penuh layar */
+    height: 95%; /* Tinggi penuh layar */
     overflow: hidden; /* Hilangkan scroll di sidebar */
     transition: width 0.3s ease;
     z-index: 2; /* Tetap di atas konten utama */

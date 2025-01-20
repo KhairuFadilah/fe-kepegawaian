@@ -19,6 +19,7 @@ body {
     color: #ecf0f1;
     display: flex;
     flex-direction: column;
+    height: 95%;
     padding: 20px;
     transition: width 0.3s ease;
     overflow: hidden;

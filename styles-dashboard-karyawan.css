@@ -4,6 +4,7 @@ body {
     margin: 0;
     display: flex;
     height: 100vh;
+    overflow: hidden;
 }
 
 .container {
@@ -23,10 +24,7 @@ body {
     padding: 20px;
     transition: width 0.3s ease;
     overflow: hidden;
-}
-
-.sidebar.collapsed {
-    width: 50px;
+    height: 100%;
 }
 
 .sidebar-header {
@@ -34,11 +32,6 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
-}
-
-.sidebar.collapsed .sidebar-title {
-    opacity: 0;
-    pointer-events: none; /* Mencegah interaksi dengan elemen tersembunyi */
 }
 
 .sidebar-title {
@@ -91,12 +84,6 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    transition: opacity 0.3s ease;
-}
-
-.sidebar.collapsed .menu ul li a .text {
-    opacity: 0;
-    pointer-events: none;
 }
 
 /* Sidebar Footer Styling */
@@ -106,7 +93,7 @@ body {
     border-top: 1px solid #34495e;
 }
 
-.sidebar-footer .home-link {
+.logout-link {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -115,114 +102,51 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.sidebar-footer .home-link:hover {
+.logout-link:hover {
     background-color: #34495e;
 }
 
-.sidebar-footer .home-link .icon {
+.logout-link .icon {
     font-size: 1.5em;
     margin-right: 10px;
 }
 
-.sidebar-footer .home-link .text {
+.logout-link .text {
     font-size: 1em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: opacity 0.3s ease;
 }
 
-.sidebar.collapsed .sidebar-footer .home-link .text {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.user-info {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    color: #ecf0f1;
-}
-
-.user-info i {
-    font-size: 1.5em;
-    margin-right: 10px;
-}
-
-.user-name {
-    font-size: 1em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: opacity 0.3s ease;
-}
-
-.sidebar.collapsed .user-info .user-name {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Main Content */
+/* Main Content Styling */
 .main-content {
     flex: 1;
     padding: 20px;
     background-color: #f4f6f9;
-}
-
-.page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    overflow-y: auto;
 }
 
 .page-header h1 {
     margin: 0;
 }
 
-.btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #fff;
+/* Dashboard Overview */
+.dashboard-overview {
+    display: flex;
+    gap: 20px;
 }
 
-.btn-primary {
-    background-color: #3498db;
+.overview-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
 }
 
-.btn-warning {
-    background-color: #f39c12;
+.overview-card h2 {
+    margin: 0 0 10px;
 }
 
-.btn-danger {
-    background-color: #e74c3c;
-}
-
-/* Data Table */
-.data-table table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.data-table th,
-.data-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-.data-table th {
-    background-color: #34495e;
-    color: #ecf0f1;
-}
-
-.data-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.data-table tr:hover {
-    background-color: #f1f1f1;
+.overview-card p {
+    font-size: 1.5em;
+    margin: 0;
 }
