@@ -1,8 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const sidebar = document.querySelector(".sidebar");
-    const toggleButton = document.getElementById("toggle-sidebar");
-
-    toggleButton.addEventListener("click", () => {
-        sidebar.classList.toggle("collapsed");
-    });
+document.getElementById('toggle-sidebar').addEventListener('click', function () {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('collapsed');
 });
